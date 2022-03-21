@@ -1,0 +1,24 @@
+
+###
+
+GET http://localhost:3000/post
+
+###
+
+GET http://localhost:3000/post?sender=eli
+
+###
+
+GET http://localhost:3000/post/6238675a48653dbd9e281bfb
+
+
+###
+
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "message" : "this is my first message",
+    "sender" : "eli1"
+}
+
