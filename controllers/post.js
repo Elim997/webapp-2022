@@ -19,7 +19,7 @@ const getAllPosts = async (req, res) => {
         res.status(200).send(posts)
     }catch(err){
         res.status(400).send({
-            'err': err.message
+            'message': err.message
         })
     }
 
@@ -38,7 +38,7 @@ const getPostById = async (req, res)=>{
         res.status(200).send(post)
     }catch(err){
         res.status(400).send({
-            'err': err.message
+            'message': err.message
         })
     }
 }
@@ -61,7 +61,8 @@ const createNewPost = async (req, res) => {
         res.status(200).send(newPost)
     } catch (err) {
         res.status(400).send({
-            'err': err.message
+            'status':'fail',
+            'message': err.message
         })
     }
 }

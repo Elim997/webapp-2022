@@ -4,7 +4,7 @@
   "description": "web app js course",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles --forceExit --coverage",
     "start": "node app.js",
     "devstart": "nodemon app.js"
   },
@@ -19,13 +19,15 @@
   },
   "homepage": "https://github.com/Elim997/webapp-2022#readme",
   "dependencies": {
-    "body-parser": "^1.19.2",
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongoose": "^6.2.7",
+    "mongoose": "^6.2.10",
     "npm": "^8.5.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }

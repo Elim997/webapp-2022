@@ -5,12 +5,11 @@ GET http://localhost:3000/post
 
 ###
 
-GET http://localhost:3000/post?sender=eli
+GET http://localhost:3000/post?sender=eli1
 
 ###
 
-GET http://localhost:3000/post/6238675a48653dbd9e281bfb
-
+GET http://localhost:3000/post/625496d9ef24648b63b74ae0
 
 ###
 
