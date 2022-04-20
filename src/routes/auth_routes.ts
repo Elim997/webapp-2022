@@ -1,6 +1,6 @@
-const express = require('express')
+import express from 'express'
 const router = express.Router()
-const Post = require('../controllers/post')
+import Post from '../controllers/post'
 
 router.get('/',Post.getAllPosts)
 
@@ -8,4 +8,4 @@ router.post('/',Post.createNewPost)
 
 router.get('/:id',Post.getPostById)
 
-module.exports = router
+export = router

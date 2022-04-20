@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-const postSchema = mongoose.Schema({
+const postSchema = new mongoose.Schema({
     message:{
         type: String,
         required: true
@@ -11,4 +11,4 @@ const postSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Post',postSchema)
+export = mongoose.model('Post',postSchema)

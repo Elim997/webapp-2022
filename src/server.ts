@@ -1,9 +1,10 @@
-const express = require('express')
+import express from 'express'
 const app = express()
-const dotenv = require('dotenv').config()
-const post_routes = require('./routes/post_routes')
-const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true})
+import dotenv from 'dotenv'
+dotenv.config()
+import post_routes from './routes/post_routes'
+import mongoose from 'mongoose'
+mongoose.connect(process.env.DATABASE_URL)
 
 const db = mongoose.connection
 db.on('error',(error)=>{
@@ -13,7 +14,7 @@ db.once('open',()=>{
     console.log('connected to DB')
 })
 
-const bodyparser = require('body-parser')
+import bodyparser from 'body-parser'
 app.use(bodyparser.urlencoded( { extended:true , limit:'1mb' } ))
 app.use(bodyparser.json())
 
@@ -23,4 +24,4 @@ app.use('/post',post_routes)
 
 
 
-module.exports = app
+export = app
